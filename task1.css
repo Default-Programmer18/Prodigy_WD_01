@@ -1,0 +1,507 @@
+
+*{
+    box-sizing: border-box;
+    list-style-type: none;
+
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    
+  }
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+
+
+
+  [class*="col-"] {
+   
+  float: left;
+   
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  
+ .container1
+ {  min-height :90vh;
+  position: relative;
+  max-height:fit-content;
+    background-image: url('../pictures/flower2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+ #navbar{
+ 
+
+  
+   width:100%;
+    background-color: rgba(32, 30, 38, 0.63);
+    padding: 15px 0;
+   align-items: center;
+    transition: border 0.3s ease;
+    z-index: 1000;
+ 
+    position: fixed;
+
+    
+    
+    
+    
+
+ }
+.navlinks
+ {
+display: grid;
+grid-template-columns: auto auto auto auto;
+  gap:2.5vw;
+  
+ 
+ }
+ .logo{
+  max-width: 10em;
+ 
+  margin-left: 2em;
+
+}
+
+.navlinksdiv {
+  
+  transition: all 0.3s;
+  position: relative;
+  padding :3px;
+  
+}
+
+.navlinksdiv a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3vw;
+  transition: color 0.3s ease;
+}
+
+
+
+.navlinksdiv::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+.navlinksdiv:hover span {
+  letter-spacing: 2px;
+}
+.navlinksdiv:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.navlinksdiv::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.navlinksdiv::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+}
+.navlinksdiv:active {
+  color:yellow;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: yellow;
+  border-bottom-color: yellow;
+}
+
+
+
+#maintext{
+
+  position: absolute;
+  top:16em;
+  left:5em;
+  background-color:rgba(0,0,0,0.1);
+
+  padding-bottom: 1vw;
+ border-radius: 15px;
+ padding-right: 0px;
+ display: flex;
+flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+#maintext h1{
+  font-family: cursive;
+  font-size: 5vw;
+  line-height: .1;
+  letter-spacing: 4px;
+ text-shadow: 2px 2px 1px rgba(255, 253, 237,0.9);
+  color:
+
+  #ff0000	;
+}
+#maintext p{
+  color :white;
+  font-size: 1.5vw;
+  font-family: cursive;
+
+}
+#maintext button{
+  padding: 10px;
+  background-color:rgb(246, 47, 47) ;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius:50px ;
+  text-shadow:none;
+  border-color:rgb(246, 47, 47);
+  border-style: solid;
+  align-self: center;
+  opacity: 0.8;
+
+}
+#maintext button:hover{
+  opacity: 1;}
+
+
+  .card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:30px;
+  margin:auto;
+  justify-items: center; 
+  
+  }
+  .card_interior {
+    position: relative;
+     min-width:18vw;
+     max-width:18vw;
+      min-height: 20vw;
+      border-radius: 4px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      box-shadow: 0px,0px 10px  rgba(0,0,0,0.2);
+    
+     
+    } 
+
+
+    .cards_heading{
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3vw;
+      margin-bottom: 2vw;
+      font-size: 2.5vw;
+      font-weight: bold;
+      color:rgb(246, 47, 47);
+        font-family:Arial, Helvetica, sans-serif;
+        
+      }
+      .card-text {
+        display:none;
+    position: absolute;
+    color:#fff;
+    bottom: 0;
+    font-family: cursive;
+    padding-left: 2vw;
+    background-color: rgba(31, 30, 30, 0.7);
+    padding-bottom: 2vw;
+    min-width:18vw;
+    border-radius: 4px;
+    font-weight: bold;
+
+    }
+  .card-text button{
+   
+    padding: 10px;
+    background-color:rgb(246, 47, 47) ;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius:50px ;
+    text-shadow:none;
+    border-color:rgb(246, 47, 47);
+    border-style: solid;
+    align-self: center;
+    opacity: 0.8;
+    
+    }
+    .card_interior:hover .card-text {
+      display: block;
+    }
+    .card-text button:hover{
+   opacity: 1; } 
+   
+
+
+   .contact-form{
+    margin-top: 2vw;
+   background-color: rgba(239, 255, 160, 0.499);
+   display: grid;
+   min-width:screen ;
+   grid-template-columns: repeat(1,1fr); 
+
+ font-family: cursive;
+ align-items: center;
+ justify-items: center;
+ padding-top: 2vw;
+
+   }
+
+.contact-form label{
+font-size: 2vw;
+color:rgb(246, 47, 47) ;
+
+}
+.contact-form input{
+  min-width: 30vw;
+  min-height: 5vw;
+  border-radius:4px;
+opacity:0.8;
+border-color: #f0adad;
+margin-bottom: 2vw;
+margin-top: 0.5vw;
+
+
+
+}
+.contact-form input:hover{
+  opacity: 1;
+  border-color: #ff0000;
+
+}
+.contact-form input:active{
+  opacity: 1;
+  border-color: #ff0000;
+
+}
+.contact-form .button{
+  padding: 10px;
+    background-color:rgb(246, 47, 47) ;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius:50px ;
+    text-shadow:none;
+    border-color:rgb(246, 47, 47);
+    border-style: solid;
+    align-self: center;
+    opacity: 0.8;
+    
+
+}
+
+.contact-form .button:hover{
+  opacity: 1; } 
+
+
+
+
+
+
+
+@media only screen and (max-width: 426px) {
+.logo{
+ 
+  margin-bottom: 3vh;
+}
+ 
+
+
+.navlinks
+{
+  justify-content: space-evenly;
+ 
+}
+#navbar{
+
+}
+.container1{
+  
+background-image: cover;
+ min-height:92vw ;
+  max-height:92vw ;
+  
+}
+
+#maintext{
+
+  position: absolute;
+  top:40vw;
+  
+  left:0;
+  background-color:rgba(0,0,0,0.1);
+
+  padding-bottom: 1vw;
+
+}
+#maintext h1{
+  font-size: 8vw;
+  background-color:rgba(0,0,0,0.1);
+}
+#maintext p{
+  
+  font-size: 5vw;
+
+}
+#maintext button{
+  font-size: 5vw;
+  padding:2vw
+}
+.navlinksdiv a{
+  font-size: 4.7vw;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+}
+.card_interior {
+  max-width: 50vw;
+  min-width: 50vw;
+  min-height: 20vh;
+}
+.cards_heading{
+  font-size: 6.5vw;
+}
+.card-text {
+  min-width: 50vw;
+  font-size: 3vw;
+}
+.contact-form label{
+  font-size: 5vw;
+
+  }
+  .contact-form input{
+    min-width: 40vw;
+    min-height: 10vw;
+
+}
+.contact-form .button{
+  font-size: 5vw;
+  padding:2vw
+
+}
+
+}
+
+@media only screen and (min-width: 426px )and (max-width:767px) {
+  .logo{
+    max-width: 8em;
+  }
+  .navlinks{
+    justify-content: space-evenly;
+   
+  }
+
+  .navlinksdiv a{
+    font-size: 2.5vw;
+
+  }
+  .card-container {
+  grid-template-columns: repeat(2,1fr);   }
+  .card_interior {
+    max-width: 35vw;
+    min-width: 35vw;
+    min-height: 30vh;
+  }
+  
+  .cards_heading{
+    font-size: 7vw;
+  }
+  #maintext h1{
+    font-size: 8vw;
+    background-color:rgba(0,0,0,0.1);
+    
+  }
+  #maintext p{
+    
+    font-size: 3vw;
+  
+  }
+  #maintext button{
+    font-size: 2vw;
+    padding:1.5vw
+  }
+  #maintext{
+ max-width:fit-content; padding: 7px; }
+ 
+ .card-text{
+  min-width: 35vw;
+ 
+  
+ }
+ .contact-form label{
+  font-size: 3vw;
+
+  }
+
+}
+@media only screen and (min-width: 1000px ){
+  .logo{
+    max-width: 10vw;
+    
+  }
+  .navlinksdiv a{
+    font-size: 1.5vw;
+
+  }
+  
+}
+
+
